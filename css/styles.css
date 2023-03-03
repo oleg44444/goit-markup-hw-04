@@ -124,13 +124,13 @@ button {
   text-align: center;
   padding: 188px 0;
   max-width: 1440px;
+  height: 600px;
   margin: 0 auto;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -189,6 +189,16 @@ button {
 }
 .qualite-item {
   width: 264px;
+}
+.qualite-div-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  height: 112px;
+  margin-bottom: 8px;
+
+  background-color: #f4f4fd;
 }
 
 .quality-subtitle {
@@ -266,7 +276,18 @@ button {
   color: var(--title-text-color);
   line-height: 1.5;
 }
-
+.social-list-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  align-items: center;
+  justify-content: center;
+}
+.ssocial-list-icon {
+  fill: #ffffff;
+}
 /* Footer */
 .footer {
   background-color: var(--primary-text-color);
