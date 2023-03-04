@@ -49,6 +49,9 @@ button {
 .header {
   border-bottom: 1px solid #e7e9fc;
   max-height: 72px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .logo {
   color: var(--primary-text-color);
@@ -93,9 +96,19 @@ button {
 .header-link:focus {
   color: var(--accept-color);
 }
-.header-link.current {
+.current {
   color: var(--accept-color);
 }
+/* .current::after {
+  content: '';
+  display: block;
+  margin-bottom: 0px;
+  color: var(--accept-color);
+  width: 66px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accept-color);
+} */
 .address {
   margin-left: auto;
 }
@@ -257,6 +270,10 @@ button {
 }
 .team-item {
   width: calc((100%-72px) / 4);
+
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .team-names {
@@ -275,25 +292,84 @@ button {
 .team-description {
   color: var(--title-text-color);
   line-height: 1.5;
+  margin-bottom: 8px;
+}
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
 }
 .social-list-link {
   display: flex;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #4d5ae5;
+  background-color: var(--primary-brand);
   align-items: center;
   justify-content: center;
 }
-.ssocial-list-icon {
+.social-list-icon {
   fill: #ffffff;
+}
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accept-color);
+}
+/* Custoners */
+.customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+.customers-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  margin-bottom: 72px;
+}
+.customer-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.customers-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 188px;
+  height: 88px;
+  color: #8e8f99;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+}
+.customers-link:hover,
+.customer-link:focus {
+  color: #404bbf;
+  border-color: #404bbf;
+}
+
+.customer-icon {
+  width: 104px;
+  height: 56px;
+  fill: currentColor;
 }
 /* Footer */
 .footer {
   background-color: var(--primary-text-color);
   padding: 100px 0;
+  max-width: 1440px;
+  height: 310px;
 }
-
+.footer-content {
+  display: flex;
+}
+.footer-text {
+  max-width: 264px;
+  min-height: 110px;
+}
 .footer-logo {
   color: var(--light-mode-backgrounds);
   margin-bottom: 16px;
@@ -301,8 +377,43 @@ button {
 .footer-description {
   color: #e7e9fc;
   line-height: 1.5;
-  max-width: 264px;
+
   margin-top: 16px;
+}
+.social-media {
+  margin-left: 120px;
+  max-width: 208px;
+  height: 80px;
+}
+.social-media-description {
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.social-media-list {
+  display: flex;
+  gap: 16px;
+}
+.social-media-item {
+}
+.social-media-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.social-media-link:hover,
+.social-list-link:focus {
+  background-color: #31d0aa;
+}
+.social-media-icon {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
 }
 /*--------- page PORTFOLIO ------*/
 .projects {
@@ -333,10 +444,16 @@ button {
 .projects-btn:focus {
   background-color: var(--accept-color);
   color: #ffffff;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .projects-btn:active {
   background-color: var(--accept-color);
   color: #ffffff;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .works-list a {
   text-decoration: none;
@@ -346,6 +463,15 @@ button {
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
+}
+.works-link {
+  display: block;
+}
+.works-link:hover,
+.works-link:focus {
+  box-shadow: 0px 2px 1px 1px rgba(46, 47, 66, 0.2),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .works-item {
   width: 360px;
